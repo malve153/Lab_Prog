@@ -1,0 +1,17 @@
+[
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\MyVector.dir\\MyVector.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab3\\src\\MyVector.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab3\\src\\MyVector.cpp"
+},
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab3\\src\\main.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab3\\src\\main.cpp"
+},
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\es1_2_3.dir\\es1_2_3_lab3.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab3\\src\\es1_2_3_lab3.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab3\\src\\es1_2_3_lab3.cpp"
+}
+]

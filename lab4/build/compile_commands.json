@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab4/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\Link.dir\\Link.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\Link.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\Link.cpp"
+},
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab4/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\main.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\main.cpp"
+},
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab4/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\pal.dir\\palindrome.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\palindrome.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\palindrome.cpp"
+},
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab4/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\pal2.dir\\palindrome_array.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\palindrome_array.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\palindrome_array.cpp"
+},
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab4/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -o CMakeFiles\\pal3.dir\\palindrome_pointers.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\palindrome_pointers.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab4\\palindrome_pointers.cpp"
+}
+]

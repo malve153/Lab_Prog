@@ -1,0 +1,6 @@
+# ninja log v5
+485	610	6919393650106005	main.exe	cedfe88416546a2a
+446	525	6915911339551628	libMyVector.a	482e7baa41d348da
+7	446	6915911338758082	CMakeFiles/MyVector.dir/MyVector.cpp.obj	589a60c7c80f1c6b
+9	452	6915913035273562	CMakeFiles/main.dir/main.cpp.obj	fea650e733542bed
+5	485	6919393648854353	CMakeFiles/main.dir/src/main.cpp.obj	f7b1f83ebe39290c
