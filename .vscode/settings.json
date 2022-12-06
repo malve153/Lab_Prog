@@ -49,7 +49,7 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/.",
+    "cmake.sourceDirectory": "${workspaceFolder}/lab6",
     "cmake.configureArgs": [
            "-DOPTIONA=ON",
            "-DOPTIONB=ON"

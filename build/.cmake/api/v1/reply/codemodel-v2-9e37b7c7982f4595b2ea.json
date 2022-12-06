@@ -9,14 +9,13 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.0"
+						"string" : "2.9"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -28,11 +27,10 @@
 					[
 						0
 					],
-					"name" : "lab3",
+					"name" : "lab6",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -40,15 +38,8 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "MyVector::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MyVector-Debug-fee9dffb20ae3348a37c.json",
-					"name" : "MyVector",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-0f0f40453445340c30e1.json",
+					"jsonFile" : "target-main-Debug-48864986357b3dbd0687.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -59,7 +50,7 @@
 	"paths" : 
 	{
 		"build" : "C:/Users/User/Desktop/Lab_Prog/build",
-		"source" : "C:/Users/User/Desktop/Lab_Prog"
+		"source" : "C:/Users/User/Desktop/Lab_Prog/lab6"
 	},
 	"version" : 
 	{
