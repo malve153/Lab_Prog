@@ -1,6 +1,6 @@
 //Malvestio Andrea mat: 2032464
-#ifndef MYVECTOR
-#define MYVECTOR
+#ifndef MYVECTOR_H
+#define MYVECTOR_H
 #include <iostream>
 
 template<typename T> class MyVector;

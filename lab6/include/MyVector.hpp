@@ -1,4 +1,6 @@
 //Malvestio Andrea mat: 2032464
+#ifndef MYVECTOR_HPP
+#define MYVECTOR_HPP
 
 template<typename T>
 MyVector<T>::MyVector(std::initializer_list<T> l)
@@ -155,3 +157,5 @@ std::string OutOfBoundsException::printError()
 {
 	return message;
 }
+
+#endif
