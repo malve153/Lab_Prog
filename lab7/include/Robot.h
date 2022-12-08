@@ -1,12 +1,14 @@
 #ifndef ROBOT_H
 #define ROBOT_H
-#include "Tile.h"
+#include "Maze.h"
 
 class Robot{
 public:
-
+    Robot(Tile mazePos);
+    virtual void move(Position p);
+    Position getPos(){ return pos; }
 private:
-    Tile pos;
+    Position pos;
 };
 
 #include "Robot.hpp"

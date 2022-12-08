@@ -13,6 +13,7 @@ void Maze::fillMaze(std::string file_name)
     std::ifstream file(file_name);
     if(file) 
     {
+        std::string s;
         for(int i=0; i < matrix.size(); i++){
             for(int j=0; j < matrix[i].size(); j++){
                 if(file.peek() != '\n'){
@@ -21,30 +22,33 @@ void Maze::fillMaze(std::string file_name)
                         actual_pos = matrix[i][j];
                     }
                 }
-                else file.get();
+                else file.ignore(1);
             }
-            if(file.peek() == '\n') file.get();
+            if(file.peek() == '\n') file.ignore(1);
         }
+        file.close();
     }
     else{
-        std::cout << "file opening failed\n";
+        std::cerr << "file opening failed\n";
         return;
     }
 }
 
-void Maze::movePos(int x, int y)
+void Maze::movePos(Position p)
 {
-    if(!matrix[actual_pos.getX() + x][actual_pos.getY() + y].isSolid()){
+    if(!matrix[p.getX()][p.getY()].isSolid()){
         Tile t = actual_pos;
-        if((actual_pos.getX() + x) < matrix.size())
+        if((p.getX()) < matrix.size() && p.getX() >= 0)
         {
-            actual_pos.setX(actual_pos.getX() + x);
+            actual_pos.setX(p.getX());
         }
-        if((actual_pos.getY() + y) < matrix[0].size())
+        if((p.getY()) < matrix[0].size() && p.getY() >= 0)
         {
-            actual_pos.setY(actual_pos.getY() + y);
+            actual_pos.setY(p.getY());
         }
-        matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
+        if(matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'E')
+            matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
+        else actual_pos.setValue('E');
         if(matrix[t.getX()][t.getY()].getValue() != 'S'){
             matrix[t.getX()][t.getY()].setValue(' ');
         }
@@ -63,3 +67,22 @@ void Maze::printMaze()
 }
 
 #endif
+
+
+/*
+    if(!matrix[actual_pos.getX() + p.getX()][actual_pos.getY() + p.getY()].isSolid()){
+        Tile t = actual_pos;
+        if((actual_pos.getX() + p.getX()) < matrix.size())
+        {
+            actual_pos.setX(actual_pos.getX() + p.getX());
+        }
+        if((actual_pos.getY() + p.getY()) < matrix[0].size())
+        {
+            actual_pos.setY(actual_pos.getY() + p.getY());
+        }
+        matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
+        if(matrix[t.getX()][t.getY()].getValue() != 'S'){
+            matrix[t.getX()][t.getY()].setValue(' ');
+        }
+    }
+*/

@@ -9,8 +9,9 @@ class Maze{
 public:
     Maze(int nRow, int nCol);
     void fillMaze(std::string file_name);
-    void movePos(int x=0,int y=0);
+    void movePos(Position p);
     void printMaze();
+    Tile getActual_pos() { return actual_pos; }
 
 private:
     std::vector<std::vector<Tile> > matrix;

@@ -4,7 +4,7 @@
 
 class Tile : public Position{
 public:
-    Tile(char v = '*', int posX = 0, int posY = 0);
+    Tile(char v = ' ', int posX = 0, int posY = 0);
     char getValue(){ return value;}
     void setValue(char c);
     bool isSolid();

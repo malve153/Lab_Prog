@@ -4,7 +4,6 @@
 class Position{
 public:
     Position(int x=0, int y=0);
-    void setPosition(int x, int y);
     void setX(int posX) { x = posX;}
     void setY(int posY) { y = posY;}
     Position getPosition(){ return Position(x,y); }
