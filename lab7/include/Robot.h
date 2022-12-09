@@ -5,9 +5,9 @@
 class Robot{
 public:
     Robot(Tile mazePos);
-    virtual void move(Position p);
+    virtual void move(Maze& m);
     Position getPos(){ return pos; }
-private:
+protected:
     Position pos;
 };
 

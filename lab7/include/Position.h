@@ -4,9 +4,11 @@
 class Position{
 public:
     Position(int x=0, int y=0);
+    bool operator==(const Position& p);
+    bool operator!=(const Position& p);
+    Position getPosition(){ return Position(x,y); }
     void setX(int posX) { x = posX;}
     void setY(int posY) { y = posY;}
-    Position getPosition(){ return Position(x,y); }
     int getX() { return x; }
     int getY() { return y; }
 private:

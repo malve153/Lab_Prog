@@ -34,25 +34,63 @@ void Maze::fillMaze(std::string file_name)
     }
 }
 
-void Maze::movePos(Position p)
+bool Maze::movePos(Position p)
 {
-    if(!matrix[p.getX()][p.getY()].isSolid()){
+    if(!matrix[actual_pos.getX() + p.getX()][actual_pos.getY() + p.getY()].isSolid()){
         Tile t = actual_pos;
-        if((p.getX()) < matrix.size() && p.getX() >= 0)
+        if((actual_pos.getX() + p.getX()) < matrix.size() && (actual_pos.getX() + p.getX()) >= 0)
         {
-            actual_pos.setX(p.getX());
+            actual_pos.setX(actual_pos.getX() + p.getX());
         }
-        if((p.getY()) < matrix[0].size() && p.getY() >= 0)
+        else return false;
+        if((actual_pos.getY() + p.getY()) < matrix[0].size() && (actual_pos.getY() + p.getY()) >= 0)
         {
-            actual_pos.setY(p.getY());
+            actual_pos.setY(actual_pos.getY() + p.getY());
         }
-        if(matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'E')
-            matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
-        else actual_pos.setValue('E');
-        if(matrix[t.getX()][t.getY()].getValue() != 'S'){
-            matrix[t.getX()][t.getY()].setValue(' ');
+        else return false;
+        //FORSE DA RIMUOVERE: serve solo per segnare la posizione del robot
+        if(actual_pos.getPosition() != t.getPosition()){
+            if(matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'E' && matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'S')
+                matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
+            else if(matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'S')
+                actual_pos.setValue('E');
+            if(matrix[t.getX()][t.getY()].getValue() != 'S' && matrix[t.getX()][t.getY()].getValue() != 'E'){
+                matrix[t.getX()][t.getY()].setValue('+');
+            }
+            return true;
         }
+        else return false;
     }
+    else return false;
+}
+
+bool Maze::checkWallUp()
+{
+    if(matrix[actual_pos.getX()-1][actual_pos.getY()].isSolid()) return true;
+    else return false;
+}
+
+bool Maze::checkWallDown()
+{
+    if(matrix[actual_pos.getX()+1][actual_pos.getY()].isSolid()) return true;
+    else return false;
+}
+
+bool Maze::checkWallRight()
+{
+    if(matrix[actual_pos.getX()][actual_pos.getY()+1].isSolid()) return true;
+    else return false;
+}
+
+bool Maze::checkWallLeft()
+{
+    if(matrix[actual_pos.getX()][actual_pos.getY()-1].isSolid()) return true;
+    else return false;
+}
+
+Tile Maze::getPosAt(Position p)
+{
+    return matrix[p.getX()][p.getY()];
 }
 
 void Maze::printMaze()
@@ -86,3 +124,28 @@ void Maze::printMaze()
         }
     }
 */
+
+/*bool Maze::movePos(Position p)
+{
+    if(!matrix[p.getX()][p.getY()].isSolid()){
+        Tile t = actual_pos;
+        if((p.getX()) < matrix.size() && p.getX() >= 0)
+        {
+            actual_pos.setX(p.getX());
+        }
+        else return false;
+        if((p.getY()) < matrix[0].size() && p.getY() >= 0)
+        {
+            actual_pos.setY(p.getY());
+        }
+        else return false;
+        if(matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'E')
+            matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
+        else actual_pos.setValue('E');
+        if(matrix[t.getX()][t.getY()].getValue() != 'S'){
+            matrix[t.getX()][t.getY()].setValue(' ');
+        }
+        return true;
+    }
+    else return false;
+}*/

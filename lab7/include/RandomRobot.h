@@ -3,9 +3,10 @@
 #include "Robot.h"
 
 class RandomRobot : public Robot{
-    RandomRobot(Tile mazePos) : Robot(mazePos){}
-    //void move(Maze& m) override;
+public:
+    RandomRobot(Tile mazePos) : Robot(mazePos){ srand(time(NULL)); }
+    void move(Maze& m) override;
 };
 
-
+#include "RandomRobot.hpp"
 #endif

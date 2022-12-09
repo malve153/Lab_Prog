@@ -9,8 +9,13 @@ class Maze{
 public:
     Maze(int nRow, int nCol);
     void fillMaze(std::string file_name);
-    void movePos(Position p);
+    bool movePos(Position p);
+    bool checkWallUp();
+    bool checkWallRight();
+    bool checkWallLeft();
+    bool checkWallDown();
     void printMaze();
+    Tile getPosAt(Position p);
     Tile getActual_pos() { return actual_pos; }
 
 private:

@@ -12,7 +12,7 @@ Tile::Tile(char v, int posX, int posY)
 
 void Tile::setValue(char c)
 {
-    if(c == '*' || c == ' ' || c == 'E' || c == 'S' || c == 'X') value = c;
+    if(c == '*' || c == ' ' || c == 'E' || c == 'S' || c == 'X' || c== '+') value = c;
 }
 
 bool Tile::isSolid()
