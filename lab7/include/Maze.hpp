@@ -48,7 +48,6 @@ bool Maze::movePos(Position p)
             actual_pos.setY(actual_pos.getY() + p.getY());
         }
         else return false;
-        //FORSE DA RIMUOVERE: serve solo per segnare la posizione del robot
         if(actual_pos.getPosition() != t.getPosition()){
             if(matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'E' && matrix[actual_pos.getX()][actual_pos.getY()].getValue() != 'S')
                 matrix[actual_pos.getX()][actual_pos.getY()].setValue('X');
