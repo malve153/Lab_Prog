@@ -13,7 +13,6 @@ void Maze::fillMaze(std::string file_name)
     std::ifstream file(file_name);
     if(file) 
     {
-        std::string s;
         for(int i=0; i < matrix.size(); i++){
             for(int j=0; j < matrix[i].size(); j++){
                 if(file.peek() != '\n'){
