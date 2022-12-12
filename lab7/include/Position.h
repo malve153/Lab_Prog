@@ -1,6 +1,7 @@
 #ifndef POSITION_H
 #define POSITION_H
 
+// class to handle the position of the robot or a tile
 class Position{
 public:
     Position(int x=0, int y=0);

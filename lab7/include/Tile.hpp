@@ -10,6 +10,8 @@ Tile::Tile(char v, int posX, int posY)
         else solid = false;
 }
 
+// '*'=wall, ' '=empy tile, 'E'=exit, 'S'=start, 'X'=current position, 
+// '+'=robot has already been here
 void Tile::setValue(char c)
 {
     if(c == '*' || c == ' ' || c == 'E' || c == 'S' || c == 'X' || c== '+') value = c;

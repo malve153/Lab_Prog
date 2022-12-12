@@ -8,6 +8,7 @@ Maze::Maze(int nRow, int nCol)
     actual_pos = matrix[0][0];
 }
 
+//opens the file and inserts the characters in the matrix ignoring '\n'
 void Maze::fillMaze(std::string file_name)
 {
     std::ifstream file(file_name);
@@ -33,6 +34,8 @@ void Maze::fillMaze(std::string file_name)
     }
 }
 
+//move actual_pos to p and set the new position with the character 'X'
+//then set the old position to '+' to show that the robot has already been there
 bool Maze::movePos(Position p)
 {
     if(!matrix[actual_pos.getX() + p.getX()][actual_pos.getY() + p.getY()].isSolid()){
