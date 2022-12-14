@@ -20,7 +20,7 @@ int main(){
     m2.fillMaze("maze2.txt");
     RandomRobot r1(m2.getActual_pos());
     std::cout << "posizione del robot: [" << r1.getPos().getX() << "]["<< r1.getPos().getY()  <<"]\n";
-    m.printMaze();
+    m2.printMaze();
     r1.move(m2);
     std::cout << "posizione del robot: [" << r1.getPos().getX() << "]["<< r1.getPos().getY()  <<"]\n";
     

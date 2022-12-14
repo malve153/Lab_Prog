@@ -25,7 +25,7 @@ void RandomRobot::move(Maze& m)
         c++;
     }
     m.printMaze();
-    std::cout<< "Exit found in "<<c<<" steps\n";
+    std::cout<< "EXIT FOUND IN "<<c<<" steps\n";
 }
 
 #endif

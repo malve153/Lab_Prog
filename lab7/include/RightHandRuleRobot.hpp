@@ -107,6 +107,12 @@ void RightHandRuleRobot::move(Maze& m){
         m.printMaze();
         sleep_function(time_multiplier * 300);
     }
-    if(m.getActual_pos().isExit()) std::cout << "-------Il robot e' uscito-------\n";
+    if(m.getActual_pos().isExit()) std::cout << "-------THE ROBOT IS OUT OF THE MAZE-------\n";
+    std::cout<<"STARTING RANDOM ROBOT IN 3..";
+    sleep_function(time_multiplier * 1000);
+    std::cout<<"2..";
+    sleep_function(time_multiplier * 1000);
+    std::cout<<"1..\n";
+    sleep_function(time_multiplier * 1000);
 }
 #endif
