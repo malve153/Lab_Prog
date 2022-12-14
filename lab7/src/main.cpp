@@ -25,9 +25,9 @@ int main(){
     m.printMaze();
     r.move(m);
     std::cout << "posizione del robot: [" << r.getPos().getX() << "]["<< r.getPos().getY()  <<"]\n"; 
-    std::cout<<"STARTING RANDOM ROBOT IN 3..";
+    std::cout<<"STARTING RANDOM ROBOT IN 3..\n";
     sleep_function(time_multiplier * 1000);
-    std::cout<<"2..";
+    std::cout<<"2..\n";
     sleep_function(time_multiplier * 1000);
     std::cout<<"1..\n";
     sleep_function(time_multiplier * 1000);
