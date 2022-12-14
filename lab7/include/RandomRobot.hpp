@@ -1,6 +1,16 @@
 #ifndef RANDOMROBOT_HPP
 #define RANDOMROBOT_HPP
 
+#ifdef _WIN32
+#  include <Windows.h>
+#  define sleep_function         Sleep
+#  define time_multiplier        1
+#else
+#  include <unistd.h>
+#  define sleep_function         usleep
+#  define time_multiplier        1000
+#endif
+
 void RandomRobot::move(Maze& m)
 {
     int c=0;
@@ -8,6 +18,8 @@ void RandomRobot::move(Maze& m)
     {
         m.movePos(Position(rand() %3-1,rand() %3-1));
         pos = m.getActual_pos();
+        m.printMaze();
+        sleep_function(time_multiplier * 300);
         c++;
     }
     std::cout<< "Exit found in "<<c<<" steps\n";

@@ -98,7 +98,15 @@ void Maze::printMaze()
 {
     for(int i=0; i < matrix.size(); i++){
         for(int j=0; j < matrix[i].size(); j++){
-            std::cout<<matrix[i][j];
+            if(matrix[i][j].getValue() == '+')
+                std::cout<<"\033[91m"<<matrix[i][j];
+            else if(matrix[i][j].getValue() == 'X')
+                std::cout<<"\033[32m"<<matrix[i][j];
+            else if(matrix[i][j].getValue() == 'S')
+                std::cout<<"\033[34m"<<matrix[i][j];
+            else if(matrix[i][j].getValue() == 'E')
+                std::cout<<"\033[36m"<<matrix[i][j];
+            else std::cout<<"\033[0m"<<matrix[i][j];
         }
         std::cout<<"\n";
     }

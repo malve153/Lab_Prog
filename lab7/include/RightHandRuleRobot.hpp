@@ -1,6 +1,16 @@
 #ifndef RIGHTHANDRULEROBOT_HPP
 #define RIGHTHANDRULEROBOT_HPP
 
+#ifdef _WIN32
+#  include <Windows.h>
+#  define sleep_function         Sleep
+#  define time_multiplier        1
+#else
+#  include <unistd.h>
+#  define sleep_function         usleep
+#  define time_multiplier        1000
+#endif
+
 void RightHandRuleRobot::turnL()
 {
     turn--;
@@ -83,17 +93,20 @@ void RightHandRuleRobot::move(Maze& m){
                 moveForward(m);
             }
         }
-        else if(freeL(m))   //if direction and turn are not default and it can move left
+        else if(freeR(m))   //if direction and turn are not default and it can move left
         {                   //turn left and move forward
-            turnL();
+            turnR();
             moveForward(m);
         }
         else if( moveForward(m)){} //if direction and turn are not default and can move forward, do it
         else   //otherwise turn right and move forward
         {
-            turnR();
+            turnL();
             moveForward(m);
         }
+        m.printMaze();
+        sleep_function(time_multiplier * 300);
     }
+    if(m.getActual_pos().isExit()) std::cout << "-------Il robot e' uscito-------\n";
 }
 #endif
