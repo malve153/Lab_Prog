@@ -18,10 +18,13 @@ void RandomRobot::move(Maze& m)
     {
         m.movePos(Position(rand() %3-1,rand() %3-1));
         pos = m.getActual_pos();
-        m.printMaze();
-        sleep_function(time_multiplier * 300);
+        if(c%100 == 0){
+            m.printMaze();
+            sleep_function(time_multiplier * 300);
+        }
         c++;
     }
+    m.printMaze();
     std::cout<< "Exit found in "<<c<<" steps\n";
 }
 
