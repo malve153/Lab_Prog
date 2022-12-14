@@ -94,12 +94,12 @@ void RightHandRuleRobot::move(Maze& m){
             }
         }
         else if(freeR(m))   //if direction and turn are not default and it can move left
-        {                   //turn left and move forward
+        {                   //turn right and move forward
             turnR();
             moveForward(m);
         }
         else if( moveForward(m)){} //if direction and turn are not default and can move forward, do it
-        else   //otherwise turn right and move forward
+        else   //otherwise turn left and move forward
         {
             turnL();
             moveForward(m);
@@ -108,11 +108,5 @@ void RightHandRuleRobot::move(Maze& m){
         sleep_function(time_multiplier * 300);
     }
     if(m.getActual_pos().isExit()) std::cout << "-------THE ROBOT IS OUT OF THE MAZE-------\n";
-    std::cout<<"STARTING RANDOM ROBOT IN 3..";
-    sleep_function(time_multiplier * 1000);
-    std::cout<<"2..";
-    sleep_function(time_multiplier * 1000);
-    std::cout<<"1..\n";
-    sleep_function(time_multiplier * 1000);
 }
 #endif
