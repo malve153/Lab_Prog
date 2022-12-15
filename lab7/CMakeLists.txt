@@ -4,6 +4,15 @@ project (lab7 LANGUAGES CXX)
 
 include_directories(include)
 
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/maze.txt
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+ 
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/maze1.txt
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/maze2.txt
+    DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 add_executable(main
     src/main.cpp
 )
