@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Lab_Prog/lab8/build/CMakeFiles/lab8.exe.dir
+C:/Users/User/Desktop/Lab_Prog/lab8/build/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/Lab_Prog/lab8/build/CMakeFiles/rebuild_cache.dir

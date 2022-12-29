@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/Progetto/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/User/Desktop/Lab_Prog/Progetto/include -g -o CMakeFiles\\Battaglia_Navale.exe.dir\\src\\main.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\Progetto\\src\\main.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\Progetto\\src\\main.cpp"
+}
+]

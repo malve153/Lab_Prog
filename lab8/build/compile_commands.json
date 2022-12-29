@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/User/Desktop/Lab_Prog/lab8/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Users/User/Desktop/Lab_Prog/lab8/include -g -o CMakeFiles\\lab8.exe.dir\\src\\main.cpp.obj -c C:\\Users\\User\\Desktop\\Lab_Prog\\lab8\\src\\main.cpp",
+  "file": "C:\\Users\\User\\Desktop\\Lab_Prog\\lab8\\src\\main.cpp"
+}
+]

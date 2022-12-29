@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Lab_Prog/Progetto/build/CMakeFiles/Battaglia_Navale.exe.dir
+C:/Users/User/Desktop/Lab_Prog/Progetto/build/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/Lab_Prog/Progetto/build/CMakeFiles/rebuild_cache.dir
